@@ -1,0 +1,30 @@
+{
+    "name": "cv65kr/verhoeff",
+    "description": "PHP implementation of the Verhoeff algorithm.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "sylius-labs/coding-standard": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kajti\\Verhoeff\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Kajti\\Verhoeff\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "vendor/bin/ecs check --ansi --no-progress-bar src tests",
+            "composer validate --strict",
+            "vendor/bin/phpunit --colors=always"
+        ]
+    }
+}
